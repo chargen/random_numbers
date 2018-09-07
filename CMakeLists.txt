@@ -17,6 +17,7 @@ add_library(${PROJECT_NAME}
   src/random_numbers.cpp)
 
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 install(TARGETS ${PROJECT_NAME}
         ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
